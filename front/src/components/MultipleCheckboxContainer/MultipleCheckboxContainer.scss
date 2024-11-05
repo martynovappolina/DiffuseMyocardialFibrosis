@@ -1,0 +1,17 @@
+.multiple {
+    display: block;
+    
+    .checkbox-container-box {
+        display: block;
+        width: auto;
+        margin-left: -25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 500px) {
+    .checkbox-container-box {
+        margin-left: 0 !important;
+    } 
+}

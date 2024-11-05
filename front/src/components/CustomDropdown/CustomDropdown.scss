@@ -1,0 +1,9 @@
+.custom-dropdown {
+    padding: 10px;
+
+    &-container {
+        display: grid;
+        grid-template-columns: 4fr 3fr;
+        margin-bottom: 15px;
+    }
+}
