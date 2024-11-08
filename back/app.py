@@ -18,7 +18,7 @@ def hello_world():
     return 'Hello, world!'
 
 
-@app.route('/predict/', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     data = {
         # 'ProBNP': [request.form['ProBNP']],

@@ -9,7 +9,7 @@ function App() {
       <Header />
       <div>
         <div className='title'>Оценка вероятности наличия диффузного миокардиального фиброза при акромегалии</div>
-        <Calculator fields={fields} url='predict/' />
+        <Calculator fields={fields} url='predict' />
       </div>
     </>
   )
