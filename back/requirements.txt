@@ -4,3 +4,4 @@ Flask==2.3.2
 Flask-Cors==3.0.10
 catboost==1.2
 numpy==1.26.1
+scipy==1.11.3
