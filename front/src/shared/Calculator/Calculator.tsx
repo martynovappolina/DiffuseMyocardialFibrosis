@@ -158,7 +158,7 @@ const Calculator: React.FC<CalculatorProps> = ({ fields = [], calculate, calcula
     };
 
     return (
-        <div style={{ paddingTop: '15px' }}>
+        <div className='calculator' style={{ paddingTop: '15px' }}>
             {fields?.filter(f => !f.category).map(fieldRender)}
             {categories.length > 0 ? categories.map(x => {
                 const descriptions = categoriesWithDescription.filter(c => c.title === x.title);
@@ -174,7 +174,7 @@ const Calculator: React.FC<CalculatorProps> = ({ fields = [], calculate, calcula
                         {x.accordionIsOpen && (
                             <div>
                                 {descriptions.length !== 0 && <p className='description'>{descriptions[0].description}</p>}
-                                {fields?.filter(f => f.category === x.title).sort((a, b) => a.label.toString().localeCompare(b.label.toString())).map(fieldRender)}
+                                {fields?.filter(f => f.category === x.title).map(fieldRender)}
                             </div>
                         )}
                     </>

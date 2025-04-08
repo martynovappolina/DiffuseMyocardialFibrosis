@@ -4,7 +4,6 @@ body {
   font-family: "Open Sans", Helvetica, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $background;
   color: $primary;
   margin: 0;
 }
@@ -15,7 +14,7 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-.enc-calculators {
+#aktg-calculator {
   .notes {
     font-size: 10px;
   }
