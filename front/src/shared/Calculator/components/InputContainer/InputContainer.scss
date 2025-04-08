@@ -1,0 +1,64 @@
+@import '../../../variables.scss';
+
+.input-container {
+    &-box {
+        display: flex;
+        margin-left: 20px;
+    }
+
+    .unit {
+        margin-left: 10px;
+        align-self: center;
+    }
+
+    .input-box {
+        position: relative;
+        width: fit-content;
+
+        input {
+            margin: 0;
+        }
+
+        .description-bubble {
+            position: absolute;
+            top: -37px;
+            width: fit-content;
+            text-align: center;
+            font-size: 12px;
+            border: solid 1px $primary-transparent;
+            border-radius: 5px;
+            background-color: $background;
+            padding: 5px;
+            z-index: 1;
+    
+            &::before {
+                content: '';
+                bottom: -8px;
+                left: calc(50% - 7px);
+                position: absolute;
+                background-color: $background;
+                width: 14px;
+                height: 14px;
+                border: solid 1px $primary-transparent;
+                transform: rotate(45deg);
+                border-top: transparent;
+                border-left: transparent;
+                z-index: -1;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        &-box {
+            margin-left: 0;
+        }
+
+        .input-box .description-bubble {
+            display: none;
+        }
+
+        .unit-description {
+            display: none;
+        }
+    }
+}

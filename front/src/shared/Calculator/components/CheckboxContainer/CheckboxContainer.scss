@@ -1,0 +1,77 @@
+.checkbox-container {
+    &.column {
+        display: block;
+    }
+
+    &-option-box {
+        display: flex;
+        margin-left: 20px;
+        position: relative;
+        cursor: pointer;
+        min-width: 53px;
+    }
+
+    &-box {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &.column {
+            display: block;
+            width: auto;
+            margin-left: -25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }  
+    
+    
+    @media (max-width: 500px) {
+        &-option-box:first-child {
+            margin-left: 0;
+        }
+
+        &-box.column {
+            .checkbox-container-option-box {
+                margin-left: 0;
+            }
+            margin-left: 0;
+        }
+    }
+}
+
+.checkbox {
+    position: absolute;
+    top: 0;
+    height: 13px;
+    width: 13px;
+    border-radius: 2px;
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+    visibility: hidden;
+
+    &.error {
+        visibility: visible;
+        border: solid 1px;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+}
+
+.sex .checkbox {
+    right: 14px;
+}
+
+.checkbox-container-option-box.no .checkbox {
+    right: 25px;
+}

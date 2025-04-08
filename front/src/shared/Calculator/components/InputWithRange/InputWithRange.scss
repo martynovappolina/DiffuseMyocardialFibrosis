@@ -1,0 +1,22 @@
+.input-with-range {
+    margin-bottom: 25px;
+
+    &-grid {
+        display: grid;
+        grid-template-columns: 8fr 8fr;
+
+        @media (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .input-with-unit {
+        display: flex;
+    }
+
+    .unit {
+        margin-left: 10px;
+        align-self: center;
+    }
+}

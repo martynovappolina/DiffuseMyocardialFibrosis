@@ -1,0 +1,1 @@
+export type CalculatorStateType = Record<string, any>; 

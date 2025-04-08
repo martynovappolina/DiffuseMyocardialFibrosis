@@ -1,0 +1,52 @@
+@import '../../shared/variables.scss';
+
+.calculator {
+    .row {
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: 10fr 6fr;
+
+        @media (max-width: 850px) {
+            grid-template-columns: 8fr 8fr;
+        }
+
+        @media (max-width: 500px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &-button-container {
+        margin-bottom: 15px;
+    }
+
+    .description {
+        margin-bottom: 50px;
+    }
+
+    .category-header {
+        display: flex;
+        width: fit-content;
+        cursor: pointer;
+        
+        .arrow {
+            width: 15px;
+            height: 15px;
+            margin-left: 20px;
+            border: solid 2px $primary;
+            transform: rotate(45deg);
+
+            &.down {            
+                margin-top: 20px;
+                border-top: transparent; 
+                border-left: transparent; 
+            }
+
+            &.up {
+                margin-top: 30px;
+                border-bottom: transparent; 
+                border-right: transparent; 
+            }
+        }
+    }
+}

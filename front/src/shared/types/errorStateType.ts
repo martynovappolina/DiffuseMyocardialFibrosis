@@ -1,0 +1,1 @@
+export type ErrorStateType = Record<string, boolean>
