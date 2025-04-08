@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import CheckboxContainer from './components/CheckboxContainer/CheckboxContainer';
-import InputContainer from './components/InputContainer/InputContainer';
+import CheckboxContainer from './components/CheckboxContainer/CheckboxContainer.tsx';
+import InputContainer from './components/InputContainer/InputContainer.tsx';
 import './Calculator.scss';
-import { categoriesWithDescription } from '../categoriesWithDescription';
-import { DataType } from '../types/dataType';
-import { CalculatorStateType } from '../types/calculatorStateType';
-import { AccordionItemType } from '../types/accordionItemType';
-import { ErrorStateType } from '../types/errorStateType';
-import { FieldType } from '../types/fieldType';
-import InputWithRange from './components/InputWithRange/InputWithRange';
-import { OptionsView } from '../enums/optionsView';
-import { CheckboxType } from '../../domain/fieldTypes/checkboxType';
-import { InputWithRangeType } from '../../domain/fieldTypes/inputWithRangeType';
-import { InputWithUnitValueType } from '../../domain/fieldTypes/inputWithUnitValueType';
-import { InputWithUnitOptionsType } from '../../domain/fieldTypes/inputWithUnitOptionsType';
+import { categoriesWithDescription } from '../categoriesWithDescription.ts';
+import { DataType } from '../types/dataType.ts';
+import { CalculatorStateType } from '../types/calculatorStateType.ts';
+import { AccordionItemType } from '../types/accordionItemType.ts';
+import { ErrorStateType } from '../types/errorStateType.ts';
+import { FieldType } from '../types/fieldType.ts';
+import InputWithRange from './components/InputWithRange/InputWithRange.tsx';
+import { OptionsView } from '../enums/optionsView.ts';
+import { CheckboxType } from '../../domain/fieldTypes/checkboxType.ts';
+import { InputWithRangeType } from '../../domain/fieldTypes/inputWithRangeType.ts';
+import { InputWithUnitValueType } from '../../domain/fieldTypes/inputWithUnitValueType.ts';
+import { InputWithUnitOptionsType } from '../../domain/fieldTypes/inputWithUnitOptionsType.ts';
 
 
 interface CalculatorProps {

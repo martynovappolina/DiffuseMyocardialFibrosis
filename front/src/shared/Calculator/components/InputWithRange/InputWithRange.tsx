@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import './InputWithRange.scss';
-import { FieldType } from '../../../types/fieldType';
-import CustomRange from '../CustomRange/CustomRange';
-import { InputWithRangeType } from '../../../../domain/fieldTypes/inputWithRangeType';
+import { FieldType } from '../../../types/fieldType.tsx';
+import CustomRange from '../CustomRange/CustomRange.tsx';
+import { InputWithRangeType } from '../../../../domain/fieldTypes/inputWithRangeType.ts';
 
 interface InputWithRangeProps {
     field: FieldType

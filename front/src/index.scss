@@ -1,0 +1,138 @@
+@import './shared/variables.scss';
+
+body {
+  font-family: "Open Sans", Helvetica, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $background;
+  color: $primary;
+  margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.enc-calculators {
+  .notes {
+    font-size: 10px;
+  }
+  
+  input, select {
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-size: 15px;
+    color: $primary;
+  }
+  
+  select {
+    width: 120px;
+    margin-left: 10px;
+  }
+  
+  input:not([type="range"]) {
+    max-width: 55px; 
+  }
+  
+  input:not([type="range"]):focus, input:not([type="range"]):hover,
+  select:focus, select:hover {
+      outline: none !important;
+      border-color: $secondary;
+  }
+  
+  button {
+    padding: 12px 18px;
+    display: inline-block;
+    opacity: 1;
+    text-align: center;
+    color: #fff;
+    background: $primary;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+
+    &:hover {
+      background: $secondary;
+    }
+
+    &:disabled {
+      cursor: default;
+      background: $primary-transparent;
+    }
+  }
+  
+  .custom-label {
+    color: $secondary;
+  }
+  
+  .error, .error:focus, .error:hover, .error-message {
+    border-color: $border-error;
+    background: $background-error;
+  }
+
+  #bread-units {
+    table {
+      td, th {
+        text-align: left;
+        padding: 0;
+      }
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+
+    ul li {
+      text-align: left;
+    }
+
+    td, th {
+      text-align: center;
+      padding: 10px;
+    }
+  }
+
+  .calculator a {
+    text-decoration: underline;
+  }
+  
+  @media (max-width:600px) {
+    select {
+      width: 120px;
+    }
+  
+    input:not([type="range"]) {
+      max-width: 30px; 
+    }
+  }
+  
+  @media (max-width:450px) {
+    body {
+      font-size: 12px;
+    }
+  
+    input:not([type="range"]), select {
+      font-size: 12px;
+    }
+  
+    input:not([type="range"]) {
+      height: 20px;
+    }
+  
+    select {
+      height: 32px;
+    }
+  }
+  
+  @media (max-width:345px) {
+    select {
+      width: 100px;
+    }
+  }
+}

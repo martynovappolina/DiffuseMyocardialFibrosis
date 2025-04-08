@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react'
-import CustomDropdown from '../CustomDropdown/CustomDropdown'
+import CustomDropdown from '../CustomDropdown/CustomDropdown.tsx'
 import './InputContainer.scss'
-import { FieldType } from '../../../types/fieldType'
-import { InputTypeBase } from '../../../../domain/fieldTypes/inputTypeBase'
-import { InputWithUnitOptionsType } from '../../../../domain/fieldTypes/inputWithUnitOptionsType'
+import { FieldType } from '../../../types/fieldType.ts'
+import { InputTypeBase } from '../../../../domain/fieldTypes/inputTypeBase.ts'
+import { InputWithUnitOptionsType } from '../../../../domain/fieldTypes/inputWithUnitOptionsType.ts'
 
 interface InputContainerProps {
     field: FieldType
