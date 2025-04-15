@@ -1,9 +1,21 @@
-FROM node:19.5.0-alpine
-RUN mkdir -p /app
-RUN mkdir -p /front_build
-WORKDIR /app
-COPY ./package.json /app/package.json
-RUN npm install
-COPY . /app
-RUN npm run build
-RUN cp -R /app/build/ /front_build/
+# Используем базовый образ  
+FROM node:19.5.0-alpine  
+
+# Устанавливаем рабочую директорию  
+WORKDIR /app  
+
+# Копируем файл зависимостей и устанавливаем их  
+COPY package.json ./  
+RUN npm install  
+
+# Копируем остальные файлы  
+COPY . .  
+
+# Собираем приложение  
+RUN npm run build  
+
+# Устанавливаем serve глобально для обслуживания статических файлов  
+RUN npm install -g serve  
+
+# Указываем команду для запуска сервера  
+CMD ["serve", "-s", "build", "-l", "3000"]  
