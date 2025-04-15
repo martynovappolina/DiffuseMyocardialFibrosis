@@ -18,7 +18,7 @@ import { InputWithUnitOptionsType } from '../../domain/fieldTypes/inputWithUnitO
 
 interface CalculatorProps {
     fields: DataType;
-    calculate: (body: CalculatorStateType) => any;
+    calculate: (body: CalculatorStateType) => Promise<JSX.Element> | JSX.Element | string;
     calculateOnChageField?: boolean;
 }
 
@@ -82,8 +82,14 @@ const Calculator: React.FC<CalculatorProps> = ({ fields = [], calculate, calcula
         
             return;  
         }  
-
-        setResult(calculate(body));
+        let calculateResult = calculate(body);
+        if (calculateResult instanceof Promise) {
+            calculateResult.then(result => {
+                setResult(result);
+            });
+        }else {
+            setResult(calculateResult);
+        }
     };
 
     useEffect(() => {
